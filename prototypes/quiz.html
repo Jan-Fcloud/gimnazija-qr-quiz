@@ -1,0 +1,231 @@
+<style>
+    :root{
+        --main-color: #0798ff;
+        --secondary-color: #f1f1f1;
+    }
+
+    .gmnfc-quiz{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gmnfc-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        padding: 10px;
+        font-variant: small-caps;
+    }
+
+    .gmnfc-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--main-color);
+        padding: 10px;
+    }
+
+    .gmnfc-q-label{
+        color: white;
+        font-size: 1.2em;
+
+    }
+
+    .gmnfc-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* a sleek style for the text input button, matching the radio and select input bellow */
+    .text-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .text-wrapper input {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: white;
+        color: var(--main-color);
+    }
+
+    /* a "T" icon on the right or left of the text input to showcase it is indeed a text input*/
+    .text-wrapper::after {
+        content: 'T';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px;
+        background-color: black;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: white;
+        pointer-events: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    /* a sleek style for the submit button, matching the radio, select and other inputs  */
+    .submit-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .submit-wrapper input {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: black;
+        color: var(--main-color);
+        cursor: pointer;
+        color: white;
+    }
+
+
+
+
+    /* a sleek style for the select button, matching the radio input bellow*/
+    .select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .select-wrapper select {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: white;
+        color: var(--main-color);
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+    }
+
+    .select-wrapper::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px;
+        background-color: black;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: white;
+        pointer-events: none;
+    }
+
+
+
+
+    /* Hide default radio buttons */
+    input[type="radio"] {
+        display: none;
+    }
+
+    /* Style for custom radio buttons */
+    .radio-option {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 11px;
+    }
+
+    .radio-option label {
+        display: inline-block;
+        padding: 14px 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Change color of selected radio button */
+    .radio-option input[type="radio"]:checked + label {
+        background-color: black; /* Change this color as per your preference */
+        color: white;
+        border-color: black;
+    }
+
+
+
+    .gmnfc-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        padding: 10px;
+    }
+
+</style>
+
+<div class="gmnfc-quiz">
+
+    <div class="gmnfc-header">
+        <img src="logo.png" alt="logo">
+        <h2>Kulturni maraton II. Gimnazije</h2>
+    </div>
+    <div class="gmnfc-main">
+        <h3>Vprašanje 1</h3>
+        <form method="post" class="gmnfc-form">
+
+            <label class="gmnfc-q-label" for="question3">Katero stevilo je med 1 in 3?</label><br>
+            <div class="text-wrapper">
+
+                <input type="Text" name="answer" id="3">
+            </div>
+
+            <br>
+            <div class="select-wrapper">
+                <select name="question3" id="question3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+
+            <br>
+
+            <div class="radio-option">
+                <input type="radio" id="option1" name="options" value="option1">
+                <label for="option1">Option 1</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="option2" name="options" value="option2">
+                <label for="option2">Option 2</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="option3" name="options" value="option3">
+                <label for="option3">Option 3</label>
+            </div>
+
+            <div class="submit-wrapper">
+                <input type="submit" value="Pošlji">
+            </div>
+
+        </form>
+    </div>
+    <div class="gmnfc-footer">
+        <p>&copy; 2024 Kulturni maraton II. Gimnazije</p>
+    </div>
+</div>

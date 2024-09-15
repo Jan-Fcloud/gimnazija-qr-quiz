@@ -1,0 +1,246 @@
+:root{
+    --main-color: #0798ff;
+    --secondary-color: #f1f1f1;
+    --notice-color: #f1d972;
+}
+
+body > div > header, body > div > footer{
+    display: none;
+}
+
+img{
+    max-width: 150px;
+}
+
+.gmnfc-quiz{
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.gmnfc-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    font-variant: small-caps;
+}
+
+.gmnfc-header h2{
+    text-align: center;
+}
+
+.gmnfc-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    padding: 20px;
+}
+
+
+
+.gmnfc-q-label{
+    color: white;
+    font-size: 1.2em;
+
+}
+
+.gmnfc-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* a sleek style for the text input button, matching the radio and select input bellow */
+.text-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.text-wrapper input {
+    width: 100%;
+    padding: 13px 0px;
+    font-size: 1em;
+    border: 0px solid white;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--main-color);
+}
+
+/* a "T" icon on the right or left of the text input to showcase it is indeed a text input*/
+.text-wrapper::after {
+    content: 'T';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    pointer-events: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* a sleek style for the submit button, matching the radio, select and other inputs  */
+.submit-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.submit-wrapper input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: black;
+    color: var(--main-color);
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+/* a sleek style for the select button, matching the radio input bellow*/
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 0px solid white;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--main-color);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    pointer-events: none;
+}
+
+
+
+
+/* Hide default radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style for custom radio buttons */
+.radio-option {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 11px;
+}
+
+.radio-option label {
+    display: inline-block;
+    padding: 14px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Change color of selected radio button */
+.radio-option input[type="radio"]:checked + label {
+    background-color: black; /* Change this color as per your preference */
+    color: white;
+    border-color: black;
+}
+
+
+
+.gmnfc-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+/* Reset default file input styles */
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+/* Custom file upload button */
+.upload-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: black; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Adjust top margin */
+}
+
+.upload-btn:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+/* File name display */
+.file-name {
+    font-size: 14px;
+    color: white; /* File name text color */
+    margin-bottom: 5px; /* Add bottom margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.post-notice{
+    color: var(--notice-color);
+    font-size: 0.93em;
+    font-weight: bold;
+}
+
+.nazaj-btn{
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 0px solid white;
+    border-radius: 5px;
+    color: var(--main-color);
+    background: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    align-self: start;
+}
